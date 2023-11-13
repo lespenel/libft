@@ -6,12 +6,11 @@
 /*   By: lespenel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 17:04:56 by lespenel          #+#    #+#             */
-/*   Updated: 2023/11/13 04:13:38 by lespenel         ###   ########.fr       */
+/*   Updated: 2023/11/13 19:29:21 by lespenel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <limits.h>
-#include <stdint.h>
 #include <stdlib.h>
 
 static	long int	ft_atol(const char *nptr);

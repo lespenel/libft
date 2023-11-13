@@ -6,7 +6,7 @@
 /*   By: lespenel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/13 07:54:06 by lespenel          #+#    #+#             */
-/*   Updated: 2023/11/13 03:58:21 by lespenel         ###   ########.fr       */
+/*   Updated: 2023/11/13 19:40:16 by lespenel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 char	*ft_strdup(const char *s)
 {
-	int		len;
-	char	*copy;
+	size_t		len;
+	char		*copy;
 
 	len = ft_strlen(s);
 	copy = malloc(sizeof (char) * (len + 1));

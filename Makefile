@@ -1,7 +1,5 @@
 NAME = libft.a
 
-CC = gcc
-
 CFLAGS = -Wall -Wextra -Werror
 
 SRC = ft_isalpha.c \

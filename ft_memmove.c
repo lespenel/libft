@@ -6,7 +6,7 @@
 /*   By: lespenel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 02:06:38 by lespenel          #+#    #+#             */
-/*   Updated: 2023/11/13 03:04:07 by lespenel         ###   ########.fr       */
+/*   Updated: 2023/11/13 19:36:10 by lespenel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,6 @@ void	*ft_memmove(void *dest, const void *src, size_t size)
 		}
 	}
 	else
-	{
 		ft_memcpy(dest, src, size);
-	}
 	return (dest);
 }

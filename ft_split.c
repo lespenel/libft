@@ -12,9 +12,11 @@
 
 #include "libft.h"
 
-static	int		ft_cut(char const *s, char c, char **strs);
-static	int		ft_count(char const *s, char c);
-static	void		ft_free(char **strs);
+#include <stdlib.h>
+
+static int		ft_cut(char const *s, char c, char **strs);
+static int		ft_count(char const *s, char c);
+static void		free_strs(char **strs);
 
 char	**ft_split(char const *s, char c)
 {
@@ -30,7 +32,7 @@ char	**ft_split(char const *s, char c)
 	return (strs);
 }
 
-static	int	ft_cut(char const *s, char c, char **strs)
+static int	ft_cut(char const *s, char c, char **strs)
 {
 	size_t	i;
 	size_t	count;
@@ -46,7 +48,7 @@ static	int	ft_cut(char const *s, char c, char **strs)
 			strs[count] = malloc(sizeof(char) * (i + 1));
 			if (!strs[count])
 			{
-				ft_free(strs);
+				free_strs(strs);
 				return (0);
 			}
 			ft_strlcpy(strs[count], s, i + 1);
@@ -59,7 +61,7 @@ static	int	ft_cut(char const *s, char c, char **strs)
 	return (1);
 }
 
-static	void	ft_free(char **strs)
+static void	free_strs(char **strs)
 {
 	size_t	i;
 
@@ -72,7 +74,7 @@ static	void	ft_free(char **strs)
 	free(strs);
 }
 
-static	int	ft_count(char const *s, char c)
+static int	ft_count(char const *s, char c)
 {
 	size_t	i;
 	size_t	count;
