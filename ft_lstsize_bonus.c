@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
+/*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lespenel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/12 02:39:53 by lespenel          #+#    #+#             */
-/*   Updated: 2023/11/12 18:13:08 by lespenel         ###   ########.fr       */
+/*   Created: 2023/11/12 18:19:26 by lespenel          #+#    #+#             */
+/*   Updated: 2023/11/12 18:28:17 by lespenel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+int	ft_lstsize(t_list *lst)
 {
-	t_list	*element;
+	int	lst_size;
 
-	element = ft_calloc(sizeof(t_list), 1);
-	if (element == NULL)
-		return (NULL);
-	element->content = content;
-	element->next = NULL;
-	return (element);
+	lst_size = 0;
+	if (lst == NULL)
+		return (lst_size);
+	while (lst != NULL)
+	{
+		lst = lst->next;
+		lst_size++;
+	}
+	return (lst_size);
 }

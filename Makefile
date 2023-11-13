@@ -4,7 +4,7 @@ CC = gcc
 
 CFLAGS = -Wall -Wextra -Werror
 
-SOURCES = ft_isalpha.c \
+SRC = ft_isalpha.c \
 		  ft_isdigit.c \
 		  ft_isalnum.c \
 		  ft_isascii.c \
@@ -37,19 +37,33 @@ SOURCES = ft_isalpha.c \
 		  ft_putchar_fd.c \
 		  ft_putstr_fd.c \
 		  ft_putendl_fd.c \
-		  ft_putnbr_fd.c \
-		  ft_lstnew_bonus.c \
+		  ft_putnbr_fd.c
 
-MY_OBJECT = $(SOURCES:.c=.o)
+SRC_BONUS = ft_lstnew_bonus.c \
+	    ft_lstadd_front_bonus.c \
+	    ft_lstsize_bonus.c \
+	    ft_lstlast_bonus.c \
+	    ft_lstadd_back_bonus.c \
+	    ft_lstdelone_bonus.c \
+		ft_lstclear_bonus.c \
+		ft_lstiter_bonus.c \
+		ft_lstmap_bonus.c
+
+BONUS_OBJ = $(SRC_BONUS:.c=.o)
+
+MY_OBJECT = $(SRC:.c=.o)
 
 $(NAME) :  $(MY_OBJECT)
 	ar rc $(NAME) $(MY_OBJECT)
+
+bonus :
+	$(MAKE) $(NAME) SRC="$(SRC) $(SRC_BONUS)"
 
 %.o : %.c libft.h
 	$(CC) $(CFLAGS) -o $@ -c $<
 
 clean :
-	rm -f $(MY_OBJECT)
+	rm -f $(MY_OBJECT) $(BONUS_OBJ)
 
 fclean : clean
 	rm -f $(NAME)
@@ -58,4 +72,4 @@ re : fclean all
 
 all : $(NAME)
 
-.PHONY: clean fclean re all
+.PHONY: clean fclean re bonus all
