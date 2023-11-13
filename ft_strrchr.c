@@ -6,7 +6,7 @@
 /*   By: lespenel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 19:58:38 by lespenel          #+#    #+#             */
-/*   Updated: 2023/11/08 21:31:16 by lespenel         ###   ########.fr       */
+/*   Updated: 2023/11/13 05:07:40 by lespenel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int		i;
-	char	cc;
+	size_t		i;
+	char		cc;
 
 	i = ft_strlen(s);
 	cc = c;

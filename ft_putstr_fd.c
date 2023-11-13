@@ -6,7 +6,7 @@
 /*   By: lespenel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 01:47:18 by lespenel          #+#    #+#             */
-/*   Updated: 2023/11/12 01:56:49 by lespenel         ###   ########.fr       */
+/*   Updated: 2023/11/13 02:45:35 by lespenel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,5 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	size_t	len;
-
-	len = 0;
-	while (s[len])
-		len++;
-	write(fd, s, len);
+	write(fd, s, ft_strlen(s));
 }

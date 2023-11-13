@@ -6,11 +6,11 @@
 /*   By: lespenel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 02:09:51 by lespenel          #+#    #+#             */
-/*   Updated: 2023/11/12 02:11:31 by lespenel         ###   ########.fr       */
+/*   Updated: 2023/11/13 02:44:35 by lespenel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <unistd.h>
 
 void	ft_putchar_fd(char c, int fd)
 {

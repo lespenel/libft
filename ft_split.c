@@ -6,16 +6,15 @@
 /*   By: lespenel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 02:14:19 by lespenel          #+#    #+#             */
-/*   Updated: 2023/11/12 19:57:24 by lespenel         ###   ########.fr       */
+/*   Updated: 2023/11/13 05:15:19 by lespenel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dest, const char *src, size_t n);
-int		ft_cut(char const *s, char c, char **strs);
-int		ft_count(char const *s, char c);
-void	ft_free(char **strs, int count);
+static	int		ft_cut(char const *s, char c, char **strs);
+static	int		ft_count(char const *s, char c);
+static	void		ft_free(char **strs);
 
 char	**ft_split(char const *s, char c)
 {
@@ -23,19 +22,18 @@ char	**ft_split(char const *s, char c)
 	size_t	count;
 
 	count = ft_count(s, c);
-	strs = malloc(sizeof(char *) * (count + 1));
+	strs = ft_calloc(count + 1, sizeof(char *));
 	if (!strs)
 		return (NULL);
 	if (ft_cut(s, c, strs) == 0)
 		return (NULL);
-	strs[count] = 0;
 	return (strs);
 }
 
-int	ft_cut(char const *s, char c, char **strs)
+static	int	ft_cut(char const *s, char c, char **strs)
 {
 	size_t	i;
-	int		count;
+	size_t	count;
 
 	count = 0;
 	while (*s)
@@ -48,10 +46,10 @@ int	ft_cut(char const *s, char c, char **strs)
 			strs[count] = malloc(sizeof(char) * (i + 1));
 			if (!strs[count])
 			{
-				ft_free(strs, count);
+				ft_free(strs);
 				return (0);
 			}
-			ft_strncpy(strs[count], s, i);
+			ft_strlcpy(strs[count], s, i + 1);
 			count++;
 			s += i;
 		}
@@ -61,17 +59,20 @@ int	ft_cut(char const *s, char c, char **strs)
 	return (1);
 }
 
-void	ft_free(char **strs, int count)
+static	void	ft_free(char **strs)
 {
-	while (count - 1 >= 0)
+	size_t	i;
+
+	i = 0;
+	while (strs[i])
 	{
-		free(strs[count - 1]);
-		count --;
+		free(strs[i]);
+		i++;
 	}
 	free(strs);
 }
 
-int	ft_count(char const *s, char c)
+static	int	ft_count(char const *s, char c)
 {
 	size_t	i;
 	size_t	count;
@@ -92,27 +93,3 @@ int	ft_count(char const *s, char c)
 	}
 	return (count);
 }
-
-char	*ft_strncpy(char *dest, const char *src, size_t n)
-{
-	size_t	i;
-
-	i = 0;
-	while (i < n)
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = '\0';
-	return (dest);
-}
-
-/*
-#include <stdio.h>
-int	main(void)
-{
-	char	**strs;
-	strs = ft_split("leoespenel", 'e');
-	for (int i = 0; strs[i]; i++)
-		printf("%s", strs[i]);
-}*/

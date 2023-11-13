@@ -6,10 +6,10 @@
 /*   By: lespenel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 21:01:52 by lespenel          #+#    #+#             */
-/*   Updated: 2023/11/08 22:56:45 by lespenel         ###   ########.fr       */
+/*   Updated: 2023/11/13 03:02:16 by lespenel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
+#include <stddef.h>
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

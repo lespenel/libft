@@ -6,13 +6,13 @@
 /*   By: lespenel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 20:55:46 by lespenel          #+#    #+#             */
-/*   Updated: 2023/11/11 21:51:19 by lespenel         ###   ########.fr       */
+/*   Updated: 2023/11/13 02:58:06 by lespenel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*c_str(long int nb, int digits);
+static char	*c_str(long int nb, int digits);
 
 char	*ft_itoa(int n)
 {
@@ -31,7 +31,7 @@ char	*ft_itoa(int n)
 	return (c_str(nb, digits));
 }
 
-char	*c_str(long int nb, int digits)
+static char	*c_str(long int nb, int digits)
 {
 	size_t	neg;
 	char	*str;
