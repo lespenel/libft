@@ -7,6 +7,7 @@ SRC =	  ascii/ft_isalpha.c \
 		  ascii/ft_tollower.c \
 		  \
 		  string/ft_strchr.c \
+		  string/ft_strnchr.c \
 		  string/ft_strrchr.c \
 		  string/ft_strncmp.c \
 		  string/ft_strnstr.c \
@@ -32,7 +33,6 @@ SRC =	  ascii/ft_isalpha.c \
 		  ft_stdio/ft_putnbr_fd.c \
 		  \
 		  get_next_line.c \
-		  ft_strn2join_free_s1.c \
 		  \
 		  mem/ft_memset.c \
 		  mem/ft_bzero.c \

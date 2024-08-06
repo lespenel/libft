@@ -6,7 +6,7 @@
 /*   By: lespenel <lespenel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 01:43:43 by lespenel          #+#    #+#             */
-/*   Updated: 2024/02/27 03:10:51 by lespenel         ###   ########.fr       */
+/*   Updated: 2024/08/06 06:21:09 by lespenel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stddef.h>
 
 char	*ft_strchr(const char *s, int c);
+char	*ft_strnchr(const char *s, int c, size_t n);
 char	*ft_strrchr(const char *s, int c);
 size_t	ft_strlen(const char *s);
 char	*ft_strtrim(char const *s1, char const *s2);

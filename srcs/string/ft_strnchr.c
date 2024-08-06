@@ -1,36 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strn2join_free_s1.c                             :+:      :+:    :+:   */
+/*   ft_strnchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lespenel <lespenel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/01 22:14:27 by lespenel          #+#    #+#             */
-/*   Updated: 2024/08/06 05:53:44 by lespenel         ###   ########.fr       */
+/*   Created: 2024/08/06 06:21:32 by lespenel          #+#    #+#             */
+/*   Updated: 2024/08/06 06:21:57 by lespenel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_mem.h"
-#include <stdlib.h>
+#include <stddef.h>
 
-char	*ft_strn2join_free_s1(char *s1, char *s2, size_t n1, size_t n2)
+char	*ft_strnchr(const char *s, int c, size_t n)
 {
-	char	*str;
-	size_t	l_s1;
+	size_t	i;
 
-	l_s1 = 0;
-	if (s1)
-		l_s1 = n2;
-	str = malloc(sizeof(char) * (l_s1 + n1 + 1));
-	if (str == NULL)
-	{
-		free(s1);
+	i = 0;
+	if (n == 0)
 		return (NULL);
-	}
-	ft_memcpy(str, s1, l_s1);
-	ft_memcpy(str + l_s1, s2, n1);
-	str[l_s1 + n1] = '\0';
-	if (s1 != NULL)
-		free(s1);
-	return (str);
+	while (s[i] != (char) c && i < n - 1)
+		i++;
+	if (s[i] == (char) c)
+		return ((char *) s + i);
+	else
+		return (NULL);
 }
