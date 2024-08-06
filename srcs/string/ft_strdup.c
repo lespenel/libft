@@ -6,12 +6,12 @@
 /*   By: lespenel <lespenel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 00:57:48 by lespenel          #+#    #+#             */
-/*   Updated: 2024/02/27 01:51:00 by lespenel         ###   ########.fr       */
+/*   Updated: 2024/08/06 05:51:08 by lespenel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_string.h"
-#include "mem.h"
+#include "ft_mem.h"
 #include <stdlib.h>
 
 char	*ft_strdup(const char *s)

@@ -6,12 +6,12 @@
 /*   By: lespenel <lespenel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 00:32:57 by lespenel          #+#    #+#             */
-/*   Updated: 2024/02/27 03:16:57 by lespenel         ###   ########.fr       */
+/*   Updated: 2024/08/06 05:54:50 by lespenel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "list.h"
-#include "mem.h"
+#include "ft_mem.h"
 
 t_list	*ft_lstnew(void *content)
 {

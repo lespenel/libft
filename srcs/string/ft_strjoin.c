@@ -6,12 +6,12 @@
 /*   By: lespenel <lespenel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 03:21:27 by lespenel          #+#    #+#             */
-/*   Updated: 2024/02/27 03:21:28 by lespenel         ###   ########.fr       */
+/*   Updated: 2024/08/06 05:51:21 by lespenel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_string.h"
-#include "mem.h"
+#include "ft_mem.h"
 #include <stdlib.h>
 
 char	*ft_strjoin(char const *s1, char const *s2)

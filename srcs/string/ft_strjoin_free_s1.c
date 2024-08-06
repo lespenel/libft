@@ -6,12 +6,12 @@
 /*   By: lespenel <lespenel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 02:02:22 by lespenel          #+#    #+#             */
-/*   Updated: 2024/02/27 02:39:44 by lespenel         ###   ########.fr       */
+/*   Updated: 2024/08/06 05:51:40 by lespenel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_string.h"
-#include "mem.h"
+#include "ft_mem.h"
 #include <sys/types.h>
 #include <stdlib.h>
 

@@ -6,11 +6,11 @@
 /*   By: lespenel <lespenel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 22:14:27 by lespenel          #+#    #+#             */
-/*   Updated: 2024/02/27 03:15:55 by lespenel         ###   ########.fr       */
+/*   Updated: 2024/08/06 05:53:44 by lespenel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "mem.h"
+#include "ft_mem.h"
 #include <stdlib.h>
 
 char	*ft_strn2join_free_s1(char *s1, char *s2, size_t n1, size_t n2)

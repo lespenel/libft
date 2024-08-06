@@ -6,12 +6,12 @@
 /*   By: lespenel <lespenel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 00:59:27 by lespenel          #+#    #+#             */
-/*   Updated: 2024/02/27 02:37:45 by lespenel         ###   ########.fr       */
+/*   Updated: 2024/08/06 05:51:59 by lespenel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_string.h"
-#include "mem.h"
+#include "ft_mem.h"
 #include <stdlib.h>
 
 static	int	is_charset(char const c, char const *set);

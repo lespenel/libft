@@ -6,11 +6,11 @@
 /*   By: lespenel <lespenel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 03:15:04 by lespenel          #+#    #+#             */
-/*   Updated: 2024/02/27 03:15:10 by lespenel         ###   ########.fr       */
+/*   Updated: 2024/08/06 05:53:32 by lespenel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "mem.h"
+#include "ft_mem.h"
 
 static char	*c_str(long int nb, int digits);
 

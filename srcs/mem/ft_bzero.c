@@ -6,11 +6,11 @@
 /*   By: lespenel <lespenel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 00:50:32 by lespenel          #+#    #+#             */
-/*   Updated: 2024/02/27 00:50:40 by lespenel         ###   ########.fr       */
+/*   Updated: 2024/08/06 05:53:56 by lespenel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "mem.h"
+#include "ft_mem.h"
 
 void	ft_bzero(void *s, size_t n)
 {

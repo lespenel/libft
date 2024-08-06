@@ -6,12 +6,12 @@
 /*   By: lespenel <lespenel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 01:00:11 by lespenel          #+#    #+#             */
-/*   Updated: 2024/02/27 02:33:30 by lespenel         ###   ########.fr       */
+/*   Updated: 2024/08/06 05:52:11 by lespenel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_string.h"
-#include "mem.h"
+#include "ft_mem.h"
 #include <stdlib.h>
 
 static int		ft_cut(char const *s, char c, char **strs);
