@@ -1,8 +1,5 @@
 # Libft - Custom C Library
 
-This README provides an overview of the functions implemented in the `libft` library, organized by header files.
-
-## Table of Contents
 - [ascii.h](#ascii-h)
 - [ft_mem.h](#ft_mem-h)
 - [ft_stdio.h](#ft_stdio-h)
