@@ -6,7 +6,7 @@
 /*   By: lespenel <lespenel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 00:44:47 by lespenel          #+#    #+#             */
-/*   Updated: 2024/08/06 05:55:07 by lespenel         ###   ########.fr       */
+/*   Updated: 2024/11/12 11:18:08 by lespenel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ static int	resize_vector(t_vector *vector)
 		if (temp == NULL)
 			if (free_vector(vector))
 				return (1);
-		ft_memcpy(temp, vector->ptr, vector->len);
+		ft_memcpy(temp, vector->ptr, vector->len * vector->element_size);
 		free(vector->ptr);
 		vector->ptr = temp;
 	}
