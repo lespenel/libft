@@ -81,7 +81,6 @@ Functions for reading lines from a file descriptor:
 | Function Name               | Description                                          |
 |-----------------------------|------------------------------------------------------|
 | `get_next_line`             | Reads a line from a file descriptor.                |
-| `ft_strn2join_free_s1`      | Joins two strings with specified lengths and frees the first string. |
 
 ## list.h
 
