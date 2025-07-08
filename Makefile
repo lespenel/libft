@@ -1,20 +1,20 @@
-NAME = libft.a
+NAME := libft.a
 
-CFLAGS = -Wall -Werror -Wextra -I$(INCLUDES)
+INCLUDE_DIR := include
 
-DFLAGS = -MMD -MP
+BUILD_DIR := .build
+
+SRC_DIR := src
 
 include src.mk
 
-INCLUDES = includes
+MY_OBJECT := $(addprefix $(BUILD_DIR)/, $(SRC:.c=.o))
 
-BUILD_DIR = .build
+DEPS := $(OBJ:.o=.d)
 
-SRC_DIR = srcs
+CFLAGS := -Wall -Werror -Wextra -I$(INCLUDE_DIR)
 
-MY_OBJECT = $(addprefix $(BUILD_DIR)/, $(SRC:.c=.o))
-
-DEPS = $(OBJ:.o=.d)
+DFLAGS := -MD -MP
 
 -include $(DEPS)
 
@@ -22,7 +22,7 @@ DEPS = $(OBJ:.o=.d)
 all : $(NAME)
 
 $(NAME) : $(MY_OBJECT)
-	ar rc $(NAME) $(MY_OBJECT)
+	$(AR) rc $(NAME) $(MY_OBJECT)
 
 $(BUILD_DIR)/%.o : $(SRC_DIR)/%.c
 	@mkdir -p $(shell dirname $@)
