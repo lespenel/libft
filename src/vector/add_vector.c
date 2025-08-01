@@ -27,7 +27,7 @@ int	add_vector(t_vector *vector, void *new_content)
 	i = 0;
 	while (i != vector->element_size)
 	{
-		*((char *)(vector->ptr + (vector->len * vector->element_size) + i)) \
+		*((char *)(vector->ptr + (vector->len * vector->element_size) + i))
 			= *((char *)(new_content + i));
 		i++;
 	}

@@ -5,7 +5,7 @@ compile_commands.json
 *.out
 .cache/
 cache/
-.build/
+build/
 vgcore.*
 Makefile.gen
 mlx-test

@@ -1,21 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_stdio.h                                         :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lespenel <lespenel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/27 03:02:49 by lespenel          #+#    #+#             */
-/*   Updated: 2024/02/27 03:03:45 by lespenel         ###   ########.fr       */
+/*   Created: 2024/02/27 03:06:09 by lespenel          #+#    #+#             */
+/*   Updated: 2024/02/27 03:06:24 by lespenel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_STDIO_H
-# define FT_STDIO_H
+#include "ft_io.h"
 
-void	ft_putchar_fd(char c, int fd);
-void	ft_putstr_fd(char *s, int fd);
-void	ft_putendl_fd(char *s, int fd);
-void	ft_putnbr_fd(int n, int fd);
+void	ft_putnbr_fd(int n, int fd)
+{
+	long int	nb;
 
-#endif
+	nb = n;
+	if (nb < 0)
+	{
+		nb = -nb;
+		ft_putchar_fd('-', fd);
+	}
+	if (nb >= 10)
+		ft_putnbr_fd((nb / 10), fd);
+	ft_putchar_fd((nb % 10 + '0'), fd);
+}

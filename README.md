@@ -2,7 +2,7 @@
 
 - [ascii.h](#ascii-h)
 - [ft_mem.h](#ft_mem-h)
-- [ft_stdio.h](#ft_stdio-h)
+- [ft_io.h](#ft_stdio-h)
 - [ft_string.h](#ft_string-h)
 - [get_next_line.h](#get_next_line-h)
 - [list.h](#list-h)
@@ -36,7 +36,7 @@ Functions for memory manipulation:
 | `ft_memcmp`   | Compares two blocks of memory.                    |
 | `ft_calloc`   | Allocates memory for an array and initializes it to zero. |
 
-## ft_stdio.h
+## ft_io.h
 
 Functions for standard input/output operations:
 
@@ -73,6 +73,7 @@ Functions for string manipulation:
 | `ft_split_set`         | Allocates and returns an array of strings split by a set of delimiters. |
 | `ft_striteri`          | Applies a function to each character of a string with its index, modifying the string in place. |
 | `ft_strmapi`           | Applies a function to each character of a string with its index, returning a new string. |
+| `ft_strtok_r`          | Split the string into token at each 'delim' and return a token at each call |
 
 ## get_next_line.h
 

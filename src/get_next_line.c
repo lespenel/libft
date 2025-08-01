@@ -32,8 +32,8 @@ char	*get_next_line(int fd)
 
 	line = NULL;
 	line_len = 0;
-	while (ft_strnchr(buff.buff + buff.start, \
-					'\n', buff.end - buff.start) == NULL)
+	while (ft_strnchr(buff.buff + buff.start,
+			'\n', buff.end - buff.start) == NULL)
 	{
 		if (buff.end != buff.start)
 			if (join_line(&buff, &line, &line_len) == -1)
@@ -62,21 +62,16 @@ ssize_t	read_lines(int fd, t_buff *buff)
 
 void	joinchr(t_buff *buff, size_t line_len, char **line, char **ptr)
 {
-	*ptr = ft_strnchr(buff->buff + buff->start, \
-					'\n', \
-					buff->end - buff->start) + 1;
-	*line = ft_strn2join_free_s1(*line, \
-								buff->buff + (*buff).start, \
-								*ptr - (buff->buff + buff->start), \
-								line_len);
+	*ptr = ft_strnchr(buff->buff + buff->start,
+			'\n', buff->end - buff->start) + 1;
+	*line = ft_strn2join_free_s1(*line, buff->buff + (*buff).start,
+			*ptr - (buff->buff + buff->start), line_len);
 }
 
 int	join_line(t_buff *buff, char **line, size_t *line_len)
 {
-	*line = ft_strn2join_free_s1(*line, \
-								buff->buff + buff->start, \
-								buff->end - buff->start, \
-								*line_len);
+	*line = ft_strn2join_free_s1(*line, buff->buff + buff->start,
+			buff->end - buff->start, *line_len);
 	*line_len += buff->end - buff->start;
 	if (!(*line))
 		return (-1);
