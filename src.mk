@@ -27,6 +27,7 @@ SRC =	  ascii/ft_isalpha.c \
 		  string/ft_atoi.c \
 		  string/ft_itoa.c \
 		  string/ft_strtok_r.c \
+		  string/ft_strncpy.c \
 		  \
 		  io/ft_putchar_fd.c \
 		  io/ft_putstr_fd.c \

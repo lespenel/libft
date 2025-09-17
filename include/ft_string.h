@@ -36,5 +36,6 @@ char	**ft_split_set(char const *s, char *set);
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_strtok_r(char *str, const char *delim, char **saveptr);
+char	*ft_strncpy(char *dest, const char *src, size_t n);
 
 #endif

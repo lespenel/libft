@@ -74,6 +74,7 @@ Functions for string manipulation:
 | `ft_striteri`          | Applies a function to each character of a string with its index, modifying the string in place. |
 | `ft_strmapi`           | Applies a function to each character of a string with its index, returning a new string. |
 | `ft_strtok_r`          | Split the string into token at each 'delim' and return a token at each call |
+| `ft_strncpy`          | Fill a fixed-size buffer with non-null bytes from a string |
 
 ## get_next_line.h
 
