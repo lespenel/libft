@@ -1,28 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_io.h                                            :+:      :+:    :+:   */
+/*   ft_putaddr_up.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lespenel <lespenel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/27 03:02:49 by lespenel          #+#    #+#             */
-/*   Updated: 2025/09/25 11:18:11 by lespenel         ###   ########.fr       */
+/*   Created: 2025/09/25 10:45:18 by lespenel          #+#    #+#             */
+/*   Updated: 2025/09/25 11:27:23 by lespenel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_IO_H
-# define FT_IO_H
+#include <unistd.h>
 
-# include <stddef.h>
+#include "ft_io.h"
 
-void	ft_putchar_fd(char c, int fd);
-void	ft_putstr_fd(char *s, int fd);
-void	ft_putendl_fd(char *s, int fd);
-void	ft_putnbr_fd(int n, int fd);
+void	ft_putaddr_up(void *addr)
+{
+	size_t	nb;
 
-void	ft_putsize_base(size_t nb, char *base);
-void	ft_putaddr(void *addr);
-void	ft_putaddr_up(void *addr);
-void	ft_putaddr_up_padding(void *addr);
-
-#endif
+	nb = (size_t)addr;
+	ft_putstr_fd("0x", STDOUT_FILENO);
+	ft_putsize_base(nb, "0123456789ABCDEF");
+}

@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_io.h                                            :+:      :+:    :+:   */
+/*   ft_sizetoa_base_buff.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lespenel <lespenel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/27 03:02:49 by lespenel          #+#    #+#             */
-/*   Updated: 2025/09/25 11:18:11 by lespenel         ###   ########.fr       */
+/*   Created: 2025/09/25 11:14:25 by lespenel          #+#    #+#             */
+/*   Updated: 2025/09/25 11:18:40 by lespenel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_IO_H
-# define FT_IO_H
+#include "ft_string.h"
 
-# include <stddef.h>
+void	ft_sizetoa_base_buff(size_t nb, char *base, char buff[], size_t b_size)
+{
+	const size_t	base_len = ft_strlen(base);
 
-void	ft_putchar_fd(char c, int fd);
-void	ft_putstr_fd(char *s, int fd);
-void	ft_putendl_fd(char *s, int fd);
-void	ft_putnbr_fd(int n, int fd);
-
-void	ft_putsize_base(size_t nb, char *base);
-void	ft_putaddr(void *addr);
-void	ft_putaddr_up(void *addr);
-void	ft_putaddr_up_padding(void *addr);
-
-#endif
+	while (b_size)
+	{
+		--b_size;
+		buff[b_size] = base[nb % base_len];
+		nb /= base_len;
+	}
+}

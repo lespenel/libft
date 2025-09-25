@@ -40,12 +40,16 @@ Functions for memory manipulation:
 
 Functions for standard input/output operations:
 
-| Function Name | Description                                      |
-|---------------|--------------------------------------------------|
-| `ft_putchar_fd` | Writes a character to a file descriptor.       |
-| `ft_putstr_fd`  | Writes a string to a file descriptor.           |
-| `ft_putendl_fd` | Writes a string followed by a newline to a file descriptor. |
-| `ft_putnbr_fd`  | Writes an integer to a file descriptor.         |
+| Function Name           | Description                                      |
+|-------------------------|--------------------------------------------------|
+| `ft_putchar_fd`         | Writes a character to a file descriptor.       |
+| `ft_putstr_fd`          | Writes a string to a file descriptor.           |
+| `ft_putendl_fd`         | Writes a string followed by a newline to a file descriptor. |
+| `ft_putnbr_fd`          | Writes an integer to a file descriptor.         |
+| `ft_putnaddr`           | Writes a pointer to STDOUT in hex lowercase.   |
+| `ft_putaddr_up`         | Writes a pointer to STDOUT in hex uppercase.   |
+| `ft_putaddr_up_padding'`| Writes a pointer to STDOUT in hex uppercase with a 16 char padding.   |
+| `ft_putsize_base`       | Writes a size_t to STDOUT converted to the given base.   |
 
 ## ft_string.h
 
@@ -75,6 +79,7 @@ Functions for string manipulation:
 | `ft_strmapi`           | Applies a function to each character of a string with its index, returning a new string. |
 | `ft_strtok_r`          | Split the string into token at each 'delim' and return a token at each call |
 | `ft_strncpy`          | Fill a fixed-size buffer with non-null bytes from a string |
+| `ft_sizetoa_base_buff`     | Converts a size_t to a string in a given base, filling a fixed-size buffer. |
 
 ## get_next_line.h
 

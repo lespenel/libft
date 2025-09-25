@@ -28,11 +28,16 @@ SRC =	  ascii/ft_isalpha.c \
 		  string/ft_itoa.c \
 		  string/ft_strtok_r.c \
 		  string/ft_strncpy.c \
+		  string/ft_sizetoa_base_buff.c \
 		  \
 		  io/ft_putchar_fd.c \
 		  io/ft_putstr_fd.c \
 		  io/ft_putendl_fd.c \
 		  io/ft_putnbr_fd.c \
+		  io/ft_putsize_base.c \
+		  io/ft_putaddr.c \
+		  io/ft_putaddr_up.c \
+		  io/ft_putaddr_up_padding.c \
 		  \
 		  get_next_line.c \
 		  \
