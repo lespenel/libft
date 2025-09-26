@@ -5,6 +5,7 @@ SRC =	  ascii/ft_isalpha.c \
 		  ascii/ft_isprint.c \
 		  ascii/ft_toupper.c \
 		  ascii/ft_tollower.c \
+		  ascii/ft_isspace.c \
 		  \
 		  string/ft_strchr.c \
 		  string/ft_strnchr.c \
@@ -28,7 +29,8 @@ SRC =	  ascii/ft_isalpha.c \
 		  string/ft_itoa.c \
 		  string/ft_strtok_r.c \
 		  string/ft_strncpy.c \
-		  string/ft_sizetoa_base_buff.c \
+		  string/ft_size_to_str_base.c \
+		  string/is_base_valid.c \
 		  \
 		  io/ft_putchar_fd.c \
 		  io/ft_putstr_fd.c \

@@ -1,25 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sizetoa_base_buff.c                             :+:      :+:    :+:   */
+/*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lespenel <lespenel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/25 11:14:25 by lespenel          #+#    #+#             */
-/*   Updated: 2025/09/25 11:18:40 by lespenel         ###   ########.fr       */
+/*   Created: 2025/09/25 15:45:20 by lespenel          #+#    #+#             */
+/*   Updated: 2025/09/26 09:13:37 by lespenel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_string.h"
-
-void	ft_sizetoa_base_buff(size_t nb, char *base, char buff[], size_t b_size)
+int	ft_isspace(int c)
 {
-	const size_t	base_len = ft_strlen(base);
-
-	while (b_size)
-	{
-		--b_size;
-		buff[b_size] = base[nb % base_len];
-		nb /= base_len;
-	}
+	if (c == ' ' || c == '\f' || c == '\n' || c == '\r' || c == '\t'
+		|| c == '\v')
+		return (1);
+	return (0);
 }

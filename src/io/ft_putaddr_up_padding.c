@@ -21,7 +21,7 @@ void	ft_putaddr_up_padding(void *addr)
 	char	buff[17];
 
 	nb = (size_t)addr;
-	ft_sizetoa_base_buff(nb, "0123456789ABCDEF", buff, 16);
+	ft_size_to_str_base(nb, "0123456789ABCDEF", buff, 17);
 	ft_putstr_fd("0x", STDOUT_FILENO);
 	ft_putstr_fd(buff, STDOUT_FILENO);
 }

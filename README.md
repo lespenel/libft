@@ -19,6 +19,7 @@ Functions for character handling and conversion:
 | `ft_isalnum`  | Checks if a character is alphanumeric.         |
 | `ft_isascii`  | Checks if a character is ASCII.                |
 | `ft_isprint`  | Checks if a character is printable.            |
+| `ft_isspace`  | Checks if a character is a whitespace          |
 | `ft_toupper`  | Converts a character to uppercase.             |
 | `ft_tolower`  | Converts a character to lowercase.             |
 
@@ -79,7 +80,8 @@ Functions for string manipulation:
 | `ft_strmapi`           | Applies a function to each character of a string with its index, returning a new string. |
 | `ft_strtok_r`          | Split the string into token at each 'delim' and return a token at each call |
 | `ft_strncpy`          | Fill a fixed-size buffer with non-null bytes from a string |
-| `ft_sizetoa_base_buff`     | Converts a size_t to a string in a given base, filling a fixed-size buffer. |
+| `ft_size_to_str_base`     | Converts a size_t to a string in a given base, filling a fixed-size buffer. |
+| `is_base_valid`     | Check if a given numerical base is is valid |
 
 ## get_next_line.h
 

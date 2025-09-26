@@ -6,7 +6,7 @@
 /*   By: lespenel <lespenel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 01:43:43 by lespenel          #+#    #+#             */
-/*   Updated: 2025/09/25 11:16:49 by lespenel         ###   ########.fr       */
+/*   Updated: 2025/09/25 15:38:05 by lespenel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_strtok_r(char *str, const char *delim, char **saveptr);
 char	*ft_strncpy(char *dest, const char *src, size_t n);
-void	ft_sizetoa_base_buff(size_t nb, char *base, char buff[], size_t b_size);
+void	ft_size_to_str_base(size_t nb, char *base, char buff[], size_t b_size);
+int		is_base_valid(char *base, size_t base_len);
 
 #endif
