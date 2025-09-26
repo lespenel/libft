@@ -49,8 +49,9 @@ Functions for standard input/output operations:
 | `ft_putnbr_fd`          | Writes an integer to a file descriptor.         |
 | `ft_putnaddr`           | Writes a pointer to STDOUT in hex lowercase.   |
 | `ft_putaddr_up`         | Writes a pointer to STDOUT in hex uppercase.   |
-| `ft_putaddr_up_padding'`| Writes a pointer to STDOUT in hex uppercase with a 16 char padding.   |
+| `ft_putaddr_format`     | Writes a pointer to STDOUT in hex with desired padding and case |
 | `ft_putsize_base`       | Writes a size_t to STDOUT converted to the given base.   |
+| `print_memory`          | Display n bytes memory dump |
 
 ## ft_string.h
 

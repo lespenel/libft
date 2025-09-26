@@ -23,6 +23,7 @@ void	ft_putnbr_fd(int n, int fd);
 void	ft_putsize_base(size_t nb, char *base);
 void	ft_putaddr(void *addr);
 void	ft_putaddr_up(void *addr);
-void	ft_putaddr_up_padding(void *addr);
+void	ft_putaddr_format(void *addr, int min_width, int prefix, int up);
+void	*print_memory(void *addr, size_t n);
 
 #endif

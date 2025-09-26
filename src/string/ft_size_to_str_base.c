@@ -25,22 +25,20 @@
  * @param base: The base in wich the nb value will be converted.
  * @param buff:	The destination buffer for the converted nb.
  * @param b_size: The length of the buffer (should include the '\0')
+ * @return: The length of the converted number or -1 in case of error
  */
-void	ft_size_to_str_base(size_t nb, char *base, char buff[], size_t b_size)
+int	ft_size_to_str_base(size_t nb, char *base, char buff[], size_t b_size)
 {
 	const size_t	base_len = ft_strlen(base);
 	size_t			index;
 
 	if (is_base_valid(base, base_len) == 0 || b_size < 2)
-	{
-		buff[0] = '\0';
-		return ;
-	}
+		return (-1);
 	if (nb == 0)
 	{
 		buff[0] = base[0];
 		buff[1] = '\0';
-		return ;
+		return (0);
 	}
 	index = b_size - 1;
 	while (nb && index)
@@ -51,5 +49,6 @@ void	ft_size_to_str_base(size_t nb, char *base, char buff[], size_t b_size)
 	}
 	if (nb == 0 && index)
 		ft_memmove(buff, buff + index, b_size - index);
-	buff[b_size - 1] = '\0';
+	buff[b_size - index] = '\0';
+	return (b_size - index);
 }

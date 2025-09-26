@@ -37,7 +37,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_strtok_r(char *str, const char *delim, char **saveptr);
 char	*ft_strncpy(char *dest, const char *src, size_t n);
-void	ft_size_to_str_base(size_t nb, char *base, char buff[], size_t b_size);
+int		ft_size_to_str_base(size_t nb, char *base, char buff[], size_t b_size);
 int		is_base_valid(char *base, size_t base_len);
 
 #endif

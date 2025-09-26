@@ -39,7 +39,8 @@ SRC =	  ascii/ft_isalpha.c \
 		  io/ft_putsize_base.c \
 		  io/ft_putaddr.c \
 		  io/ft_putaddr_up.c \
-		  io/ft_putaddr_up_padding.c \
+		  io/ft_putaddr_format.c \
+		  io/print_memory.c \
 		  \
 		  get_next_line.c \
 		  \
