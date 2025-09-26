@@ -45,9 +45,9 @@ void	ft_size_to_str_base(size_t nb, char *base, char buff[], size_t b_size)
 	index = b_size - 1;
 	while (nb && index)
 	{
+		--index;
 		buff[index] = base[nb % base_len];
 		nb /= base_len;
-		--index;
 	}
 	if (nb == 0 && index)
 		ft_memmove(buff, buff + index, b_size - index);
