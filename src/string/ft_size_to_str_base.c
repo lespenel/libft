@@ -6,7 +6,7 @@
 /*   By: lespenel <lespenel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/25 11:14:25 by lespenel          #+#    #+#             */
-/*   Updated: 2025/09/26 09:17:05 by lespenel         ###   ########.fr       */
+/*   Updated: 2025/09/26 14:38:44 by lespenel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ int	ft_size_to_str_base(size_t nb, char *base, char buff[], size_t b_size)
 {
 	const size_t	base_len = ft_strlen(base);
 	size_t			index;
+	size_t			len;
 
 	if (is_base_valid(base, base_len) == 0 || b_size < 2)
 		return (-1);
@@ -47,8 +48,9 @@ int	ft_size_to_str_base(size_t nb, char *base, char buff[], size_t b_size)
 		buff[index] = base[nb % base_len];
 		nb /= base_len;
 	}
+	len = b_size - index - 1;
 	if (nb == 0 && index)
-		ft_memmove(buff, buff + index, b_size - index);
-	buff[b_size - index] = '\0';
-	return (b_size - index);
+		ft_memmove(buff, buff + index, len);
+	buff[len] = '\0';
+	return (len);
 }

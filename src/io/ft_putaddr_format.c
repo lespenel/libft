@@ -6,7 +6,7 @@
 /*   By: lespenel <lespenel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/25 11:16:20 by lespenel          #+#    #+#             */
-/*   Updated: 2025/09/26 12:34:05 by lespenel         ###   ########.fr       */
+/*   Updated: 2025/09/26 14:40:30 by lespenel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ static void	print_zeros(size_t n);
  */
 void	ft_putaddr_format(void *addr, int min_width, int prefix, int uppercase)
 {
-	size_t	nb;
 	char	buff[17];
 	int		len;
 	char	*base;
@@ -41,8 +40,7 @@ void	ft_putaddr_format(void *addr, int min_width, int prefix, int uppercase)
 	base = "0123456789abcdef";
 	if (uppercase)
 		base = "0123456789ABCDEF";
-	nb = (size_t)addr;
-	len = ft_size_to_str_base(nb, base, buff, 17);
+	len = ft_size_to_str_base((size_t)addr, base, buff, 17);
 	if (len == -1)
 		return ;
 	if (prefix)
